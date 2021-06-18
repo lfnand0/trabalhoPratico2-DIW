@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ícones -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Portal</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/7a84e5cfd3.js" crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+</head>
+
+<body onload="carregaFilmes()">
+  <header class="container-fluid header">
+    <div class="row">
+      <div class="col-12 header_area">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-1 col-lg-1">
+            <a href="index.html">
+              <img class="logo" src="./images/logo.png">
+            </a>
+          </div>
+          <div class="col-12 col-sm-0 col-md-8 col-lg-8">
+            <nav class="nav">
+              <ul class="nav nav-pills nav-fill">
+                <li class="nav-item">
+                  <a class="nav-link" href="#lancamentos-div">lançamentos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#destaque">em destaque</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#avaliacoes">avaliações</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#entrevistas">entrevistas & makingof</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#novidades">novidades</a>
+                </li>
+
+              </ul>
+            </nav>
+          </div>
+          <div class="col-12 col-sm-12 col-md-3 col-lg-3 search-container">
+            <div class="input-group">
+              <div class="input-group rounded">
+                  <input id="input-pesquisa" type="search" class="form-control rounded" placeholder="Pesquisar" aria-label="Pesquisar"
+                  aria-describedby="search-addon" />    
+                <button class="button-pesquisa" onclick="pesquisaFilmes()">
+                  <span class="input-group-text border-0" id="search-addon">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </button>            
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </header>
+
+  <div id="div-index">
+    <main class="container main">
+      <div class="row lancamentos" id="lancamentos-div">
+        <h1>Lançamentos</h1>
+        <div id="lancamentos" class="row">
+  
+        </div>
+      </div>
+  
+  
+      <div class="container destaque">
+        <div class="row">
+          <div class="col-6 col-md-6 col-sm-12">
+            <h1 id="destaque">Em destaque</h1>
+          </div>
+          <div class="col-6 col-md-6">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Categoria: TODOS
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button">Aventura</button>
+                <button class="dropdown-item" type="button">Romance</button>
+                <button class="dropdown-item" type="button">Comédia</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row destaque_imagens">
+          <div class="col-3 col-md-3 col-ld-3 col-sm-6">
+            <img src="./images/destaque1.png" alt="City of Lies">
+          </div>
+          <div class="col-3 col-md-3 col-ld-3 col-sm-6">
+            <img src="./images/destaque2.png" alt="Nobody">
+          </div>
+          <div class="col-3 col-md-3 col-ld-3 col-sm-6">
+            <img src="./images/destaque3.png" alt="Unholy">
+          </div>
+          <div class="col-3 col-md-3 col-ld-3 col-sm-6">
+            <img src="./images/destaque4.png" alt="The Courier">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-12 col-sm-12">
+            <h1 style="padding-top: 20px;" id="avaliacoes">Últimas avaliações</h1><br>
+  
+  
+            <div class="card-group">
+              <div class="card">
+                <img src="./images/reviewer1.jpeg" class="card-img-top" alt="reviewer1">
+                <div class="card-body">
+                  <h5 class="card-title">Avaliação:</h5>
+                  <p class="card-text">Um dos melhores filmes de 2021, o diretor realmente se
+                    sobressaiu com essa obra.</p>
+                </div>
+                <div class="card-footer">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <small class="text-muted">24/04/2021</small>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./images/reviewer2.jpeg" class="card-img-top" alt="reviewer2">
+                <div class="card-body">
+                  <h5 class="card-title">Avaliação:</h5>
+                  <p class="card-text">Péssima produção, péssima atuação.</p>
+                </div>
+                <div class="card-footer">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <small class="text-muted">24/04/2021</small>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./images/reviewer3.jpeg" class="card-img-top" alt="reviewer3">
+                <div class="card-body">
+                  <h5 class="card-title">Avaliação:</h5>
+                  <p class="card-text">Clássico contemporâneo, definitivamente um dos melhores
+                    filmes que eu já assisti em toda a minha vida, atuação impecável, 10/10.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <small class="text-muted">24/04/2021</small>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+  
+      </div>
+  
+  
+  
+      <div class="container entrevistas" style="padding: 20px; margin: 0 auto;">
+        <h1 id="entrevistas">Entrevistas & Making of</h1>
+        <div class="row">
+          <div class="col-4 col-md-4 col-lg-4 col-sm-12">
+            <div style="display: flex; flex-flow: column;">
+              <div>
+                <!-- <iframe width="300" height="170" src="https://www.youtube.com/embed/Y55AjSS37IE"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe> -->
+              </div>
+              <div>
+                <h3><strong>Filme: </strong> Godzilla vs. Kong</h3>
+              </div>
+              <div>
+                <p>
+                  <strong>Direção: </strong>Adam Wingard<br>
+                  <strong>Roteiro: </strong>Max Borenstein, Eric Pearson<br>
+                  <strong>Estreia: </strong>31/03/2021
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 col-md-4 col-lg-4 col-sm-12">
+            <div style="display: flex; flex-flow: column;">
+              <div>
+                <!-- <iframe width="300" height="170" src="https://www.youtube.com/embed/_jw4CEBGltg"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe> -->
+              </div>
+              <div>
+                <h3><strong>Filme: </strong> Nobody</h3>
+              </div>
+              <div>
+                <p>
+                  <strong>Direção: </strong>Ilya Naishuller<br>
+                  <strong>Roteiro: </strong>Derek Kolstad<br>
+                  <strong>Estreia: </strong>26/03/2021
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 col-md-4 col-sm-12">
+            <div style="display: flex; flex-flow: column;">
+              <div>
+                <!-- <iframe width="300" height="170" src="https://www.youtube.com/embed/LC8zylZb4GU"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe> -->
+              </div>
+              <div>
+                <h3><strong>Filme: </strong> The Courier</h3>
+              </div>
+              <div>
+                <p>
+                  <strong>Direção: </strong>Dominic Cooke<br>
+                  <strong>Roteiro: </strong>Tom O'Connor<br>
+                  <strong>Estreia: </strong>19/03/2021
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="container novidades">
+        <div class="row">
+          <div class="col-12 col-md-8 col-lg-8 col-sm-12">
+            <h1 id="novidades">Novidades</h1>
+            <div class="row">
+              <div class="col-12">
+                <div class="card card-novidades mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="./images/novidade1.png" alt="Capitao">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Capitão América 4 é confirmado com roteirista de Falcão e o Soldado
+                          Invernal</h5>
+                        <p class="card-text">Malcolm Spelman assinará script do longa com Dalan Musson, da equipe da
+                          série
+                        </p>
+                        <p class="card-text"><small class="text-muted">TAGS: Séries, TV, Marvel</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card card-novidades mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="./images/novidade2.png" alt="You">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Terminam as gravações da 3ª temporada de You, da Netflix</h5>
+                        <p class="card-text">Novos episódios devem ser lançados este ano</p>
+                        <p class="card-text"><small class="text-muted">TAGS: Séries, TV, Netflix</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card card-novidades mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="./images/novidade3.png" alt="Dolittle">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Dolittle e 365 Dias vencem o Framboesa de Ouro 2021</h5>
+                        <p class="card-text">Premiação celebra os piores longas do ano</p>
+                        <p class="card-text"><small class="text-muted">TAGS: Filmes, Framboesa de Ouro</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-4 col-sm-12">
+            <h1>Sobre</h1>
+            <p>Estudante do 1º período de Ciência da Computação da PUC Minas Praça da Liberdade</h1>
+            <p><i class="fas fa-user"></i><strong> Redação: </strong>Luiz Fernando Oliveira Maciel</p>
+            <p><i class="fas fa-user"></i><strong> Pesquisa: </strong>Luiz Fernando Oliveira Maciel</p>
+            <p><i class="fas fa-user"></i><strong> Gerente Geral: </strong>Luiz Fernando Oliveira Maciel</p>
+            <h3>Redes Sociais</h3>
+            <h3>
+              <i class="fab fa-facebook-square"></i>
+              <i class="fab fa-twitter-square"></i>
+              <i class="fab fa-instagram-square"></i>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <div id="div-pesquisa" class="row">
+    
+  </div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-10 col-lg-10 col-sm-12">
+          <div class="text-center p-3">
+            <p>Copyright 2021 - Disciplina de Desenvolvimento de Interfaces Web - <strong>ICEI Puc Minas</strong></p>
+          </div>
+        </div>
+        <div class="col-12 col-md-2 col-lg-2 col-sm-0 footer_logo">
+          <a href="#">
+            <img class="logo" src="./images/logo.png">
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </footer>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+</html>
