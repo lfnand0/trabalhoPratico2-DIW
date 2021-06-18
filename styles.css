@@ -1,12 +1,13 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: rgb(54, 57, 63);
   color: white;
   margin: 0;
-}
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 header {
@@ -20,7 +21,9 @@ header {
   padding-top: 12px;
 }
 
-.nav-link, .fa, .input-group {
+.nav-link,
+.fa,
+.input-group {
   color: white;
 }
 
@@ -29,30 +32,33 @@ header {
   color: black;
 }
 
-.search-container{
+.search-container {
   padding-top: 31px;
 }
 
 .input-group {
   border: 0;
   border-radius: 7px 0px 0px 7px;
-  background-color:rgb(54, 57, 63);
+  background-color: rgb(54, 57, 63);
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
   opacity: 1; /* Firefox */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
   color: white;
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
+::-ms-input-placeholder {
+  /* Microsoft Edge */
   color: white;
 }
 
-div > button[type=button]{
+div > button[type="button"] {
   border: 0;
   border-radius: 0px 7px 7px 0px;
   background-color: rgb(54, 57, 63);
@@ -68,7 +74,7 @@ button.buttonPesquisa {
   justify-content: center;
 }
 
-.lancamentos > h1{
+.lancamentos > h1 {
   padding: 15px;
   size: 50%;
   text-align: center;
@@ -95,18 +101,18 @@ button.buttonPesquisa {
 }
 
 .item > iframe {
-  width: 90%; 
+  width: 90%;
 }
 
 .sinopse1 {
   font-size: 60%;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width: 900px) {
   .sinopse1 {
     display: none;
   }
-  .nav { 
+  .nav {
     display: none;
   }
   .dropdown {
@@ -171,7 +177,8 @@ img#imagemFilme {
   width: 50%;
 } */
 
-.texto-filme, img#imagemFilme{
+.texto-filme,
+img#imagemFilme {
   margin: 0 auto;
   padding: 20px;
 }
