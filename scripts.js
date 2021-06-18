@@ -93,7 +93,6 @@ function renderizarPaginaFilme() {
     document.getElementById("sinopseFilme").innerHTML = filme.overview;
 
     let imagem = IMG_PREFIX + filme.backdrop_path;
-    console.log(filme);
     document.getElementById("imagemFilme").src = imagem;
 
     xhr = new XMLHttpRequest();
@@ -104,7 +103,6 @@ function renderizarPaginaFilme() {
     );
     xhr.onload = () => {
       listaGeneros = JSON.parse(xhr.responseText);
-      console.log(listaGeneros);
       let textoHTML = "";
       for (i = 0; i < filme.genre_ids.length; i++) {
         for (j = 0; j < listaGeneros.genres.length; j++) {
@@ -115,7 +113,6 @@ function renderizarPaginaFilme() {
       }
 
       textoHTML = textoHTML.substring(0, textoHTML.length - 2);
-      console.log("listarGeneros: ", textoHTML);
       document.getElementById("generosFilme").innerHTML = textoHTML;
     };
     xhr.send();
